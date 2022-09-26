@@ -1,0 +1,318 @@
+<html>
+    <head>
+        <title>Case Study Between GoogleLens and Mobilenet</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body background="background.jpg">
+        <center>
+        <h1>
+            Case Study Between GoogleLens and Mobilenet
+        </h1>
+        <h3>Google Lens <img style="border-radius: 25px" src="Google Lens.png"></h3>
+        <h1>
+            V/S
+        </h1>
+        <h3 class="btn btn-primary mobilenet">Mobilenet</h3>
+        <br>
+        <br>
+        <br>
+        <ol>
+            <div class="test_image_and_results col-xs-12">
+                <li class="col-sm-4 col-xs-12">
+                    <b>
+                Test Image - 
+                    </b>
+                    <img src="water_bottle.jpg" class="img-responsive">
+                </li>
+                <h5 id="text" class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> - 
+                    <span id="answer">Water Juice Jug</span>
+                </h5>
+                <h5 id="text" class="col-sm-4 col-xs-12">
+                    Output on <b>MOBILENET MODEL</b> - 
+                    <span id="answer">Water Bottle</span>
+                </h5>
+                <div class="mini_result" class="col-xs-12">
+                    <h4 id="text">
+                        Result - 
+                    </h4>
+                    <hr>
+                    <h4 id="result"><b>MOBILENET</b> Is more Accurate</h4>
+                </div>     
+            </div>
+            <br>
+        </ol>
+        <br>
+        <hr id="seperation" width="100%"> 
+        <br>  
+        <ol>
+            <div class="test_image_and_results col-xs-12">
+                <li class="col-sm-4 col-xs-12">
+                    <b>
+                Test Image - 
+                    </b>
+                    <img src="bowl.jpg" class="img-responsive">
+                </li>
+                <h5 id="text" class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> - 
+                    <span id="answer">Silver bowl - small size</span>
+                </h5>
+                <h5 id="text" class="col-sm-4 col-xs-12">
+                    Output on <b>MOBILENET MODEL</b> - 
+                    <span id="answer">Mixing Bowl</span>
+                </h5>
+                <div class="mini_result" class="col-xs-12">
+                    <h4 id="text">
+                        Result - 
+                    </h4>
+                    <hr>
+                    <h4 id="result"><b>GOOGLE LENS</b> is more Accurate</h4>
+                </div>     
+            </div>
+            <br>
+        </ol>
+        <br>
+        <hr id="seperation" width="100%"> 
+        <br>
+        <ol>
+            <div class="test_image_and_results col-xs-12">
+                <li class="col-sm-4 col-xs-12">
+                    <b>
+                Test Image - 
+                    </b>
+                    <img src="car.jpg" class="img-responsive">
+                </li>
+                <h5 id="text" class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> - 
+                    <span id="answer">Hot Wheels Car</span>
+                </h5>
+                <h5 id="text" class="col-sm-4 col-xs-12">
+                    Output on <b>MOBILENET MODEL</b> - 
+                    <span id="answer">Taxi Cab</span>
+                </h5>
+                <div class="mini_result" class="col-xs-12">
+                    <h4 id="text">
+                        Result - 
+                    </h4>
+                    <hr>
+                    <h4 id="result"><b>GOOGLE LENS</b> is more Accurate</h4>
+                </div>     
+            </div>
+            <br>
+        </ol>
+        <br>
+        <hr id="seperation" width="100%"> 
+        <br>
+        <ol>
+            <div class="test_image_and_results col-xs-12">
+                <li class="col-sm-4 col-xs-12">
+                    <b>
+                Test Image - 
+                    </b>
+                    <img src="pen.jpg" class="img-responsive">
+                </li>
+                <h5 id="text" class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> - 
+                    <span id="answer">Rollerball Pen</span>
+                </h5>
+                <h5 id="text" class="col-sm-4 col-xs-12">
+                    Output on <b>MOBILENET MODEL</b> - 
+                    <span id="answer">Ball Point Pen</span>
+                </h5>
+                <div class="mini_result" class="col-xs-12">
+                    <h4 id="text">
+                        Result - 
+                    </h4>
+                    <hr>
+                    <h4 id="result"><b>MOBILENET</b> is mor Accurate</h4>
+                </div>     
+            </div>
+            <br>
+        </ol>
+        <br>
+        <hr id="seperation" width="100%"> 
+        <br>
+        <ol>
+            <div class="test_image_and_results col-xs-12">
+                <li class="col-sm-4 col-xs-12">
+                    <b>
+                Test Image - 
+                    </b>
+                    <img src="flower_vase.jpg" class="img-responsive">
+                </li>
+                <h5 id="text" class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> - 
+                    <span id="answer">Original German Walther Glass Vase</span>
+                </h5>
+                <h5 id="text" class="col-sm-4 col-xs-12">
+                    Output on <b>MOBILENET MODEL</b> - 
+                    <span id="answer">Vase</span>
+                </h5>
+                <div class="mini_result" class="col-xs-12">
+                    <h4 id="text">
+                        Result - 
+                    </h4>
+                    <hr>
+                    <h4 id="result"><b>GOOGLE LENS</b> is more Accurate</h4>
+                </div>     
+            </div>
+            <br>
+        </ol>
+        <br>
+        <hr id="seperation" width="100%"> 
+        <br>
+        <ol>
+            <div class="test_image_and_results col-xs-12">
+                <li class="col-sm-4 col-xs-12">
+                    <b>
+                Test Image - 
+                    </b>
+                    <img src="football.jpg" class="img-responsive">
+                </li>
+                <h5 id="text" class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> - 
+                    <span id="answer">Rubber Moulded Football</span>
+                </h5>
+                <h5 id="text" class="col-sm-4 col-xs-12">
+                    Output on <b>MOBILENET MODEL</b> - 
+                    <span id="answer">Yellow Ball</span>
+                </h5>
+                <div class="mini_result" class="col-xs-12">
+                    <h4 id="text">
+                        Result - 
+                    </h4>
+                    <hr>
+                    <h4 id="result"><b>GOOGLE LENS</b> is more Accurate</h4>
+                </div>     
+            </div>
+            <br>
+        </ol>
+        <br>
+        <hr id="seperation" width="100%"> 
+        <br>
+        <ol>
+            <div class="test_image_and_results col-xs-12">
+                <li class="col-sm-4 col-xs-12">
+                    <b>
+                Test Image - 
+                    </b>
+                    <img src="laptop.jpg" class="img-responsive">
+                </li>
+                <h5 id="text" class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> - 
+                    <span id="answer">HP Laptop Series</span>
+                </h5>
+                <h5 id="text" class="col-sm-4 col-xs-12">
+                    Output on <b>MOBILENET MODEL</b> - 
+                    <span id="answer">Laptop</span>
+                </h5>
+                <div class="mini_result" class="col-xs-12">
+                    <h4 id="text">
+                        Result - 
+                    </h4>
+                    <hr>
+                    <h4 id="result"><b>GOOGLE LENS</b> is more Accurate</h4>
+                </div>     
+            </div>
+            <br>
+        </ol>
+        <br>
+        <hr id="seperation" width="100%"> 
+        <br>
+        <ol>
+            <div class="test_image_and_results col-xs-12">
+                <li class="col-sm-4 col-xs-12">
+                    <b>
+                Test Image - 
+                    </b>
+                    <img src="microwave.jpg" class="img-responsive">
+                </li>
+                <h5 id="text" class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> - 
+                    <span id="answer">Convectional Microvwave Oven</span>
+                </h5>
+                <h5 id="text" class="col-sm-4 col-xs-12">
+                    Output on <b>MOBILENET MODEL</b> - 
+                    <span id="answer">Television System</span>
+                </h5>
+                <div class="mini_result" class="col-xs-12">
+                    <h4 id="text">
+                        Result - 
+                    </h4>
+                    <hr>
+                    <h4 id="result"><b>GOOGLE LENS</b> is more Accurate</h4>
+                </div>     
+            </div>
+            <br>
+        </ol>
+        <br>
+        <hr id="seperation" width="100%"> 
+        <br>
+        <ol>
+            <div class="test_image_and_results col-xs-12">
+                <li class="col-sm-4 col-xs-12">
+                    <b>
+                Test Image - 
+                    </b>
+                    <img src="monster_truck.jpg" class="img-responsive">
+                </li>
+                <h5 id="text" class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> - 
+                    <span id="answer">RC Pickup Truck</span>
+                </h5>
+                <h5 id="text" class="col-sm-4 col-xs-12">
+                    Output on <b>MOBILENET MODEL</b> - 
+                    <span id="answer">Holster</span>
+                </h5>
+                <div class="mini_result" class="col-xs-12">
+                    <h4 id="text">
+                        Result - 
+                    </h4>
+                    <hr>
+                    <h4 id="result"><b>GOOGLE LENS</b> is more Accurate</h4>
+                </div>     
+            </div>
+            <br>
+        </ol>
+        <br>
+        <hr id="seperation" width="100%"> 
+        <br>
+        <ol>
+            <div class="test_image_and_results col-xs-12">
+                <li class="col-sm-4 col-xs-12">
+                    <b>
+                Test Image - 
+                    </b>
+                    <img src="steel_tool.jpg" class="img-responsive">
+                </li>
+                <h5 id="text" class="col-sm-4 col-xs-12">
+                    Output on <b>GOOGLE LENS</b> - 
+                    <span id="answer">Indian Decor</span>
+                </h5>
+                <h5 id="text" class="col-sm-4 col-xs-12">
+                    Output on <b>MOBILENET MODEL</b> - 
+                    <span id="answer">Toaster</span>
+                </h5>
+                <div class="mini_result" class="col-xs-12">
+                    <h4 id="text">
+                        Result - 
+                    </h4>
+                    <hr>
+                    <h4 id="result"><b>GOOGLE LENS</b> is more Accurate</h4>
+                </div>     
+            </div>
+            <br>
+        </ol>
+        <hr width="100%" id="ending">
+        </center>
+        <div class="copy_right_footer">
+            Devolped By - Bhavya Mahipal
+        </div>
+    </body>
+</html>
